@@ -1,0 +1,14 @@
+services:
+  dns_resolver:
+    image: ubuntu:22.04
+    container_name: dns_resolver
+    command: sleep infinity
+    cap_add:
+      - NET_ADMIN
+
+  dns_servidor:
+    image: ubuntu:22.04
+    container_name: dns_servidor
+    command: sleep infinity
+    cap_add:
+      - NET_ADMIN

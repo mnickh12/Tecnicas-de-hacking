@@ -1,0 +1,25 @@
+services:
+  victima:
+    image: ubuntu:22.04
+    container_name: victima
+    command: sleep infinity
+    cap_add:
+      - NET_ADMIN
+
+  router:
+    image: ubuntu:22.04
+    container_name: router
+    command: sleep infinity
+    cap_add:
+      - NET_ADMIN
+
+  servidor_web:
+    image: nginx:alpine
+    container_name: servidor_web
+
+  atacante:
+    image: ubuntu:22.04
+    container_name: atacante
+    command: sleep infinity
+    cap_add:
+      - NET_ADMIN
